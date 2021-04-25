@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700;900&display=swap');
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  /*scroll-behavior: smooth;*/
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  /*margin-bottom: 4px;*/
+  margin: 0;
+  position: relative;
+  
+}
+.slide .control {
+  font-family: "Work Sans", sans-serif;
+  /*min-width: 125px;*/
+  /*background-color: rgba(0, 0, 0, 0.55);*/
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45));
+  color: #fff;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 16px;
+  position: absolute;
+  bottom: 0;
+  font-size: 18px;
+  opacity: 0.2;
+  transition: opacity 0.4s;
+}
+.slide .control:hover {
+  opacity: 1;
+}
+.slide .control:active {
+  opacity: 1;
+}
+.slide .slide_content {
+  width: 100%;
+  height: 100%;
+  margin: 32px 64px;
+}
+.slide .control span {
+  font-weight: 900;
+  -webkit-text-stroke: 0.2px white;
+  background-image: linear-gradient(to bottom right, #4a148c, #1e88e5);
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin: 0px 32px;
+}
+.slide .control a:link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s;
+}
+.slide .control a:visited {
+  color: #fff;
+}
+.slide .control a:hover {
+  color: #bbb;
+}
+.slide .slide_content {
+	margin: 0;
+}
