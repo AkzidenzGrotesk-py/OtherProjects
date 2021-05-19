@@ -1,4 +1,6 @@
 # OtherProjects
 Mish mash of other projects in other languages.
 
-- interpreter.c - an unfinished interpreter, broken variables.
+- interpreters/interpreter.c - an unfinished interpreter, broken variables.
+- interpreters/notruby - ruby, but only integers, strings and the `puts` function.
+- slides/ - a slideshow system abusing `overflow: hidden` and IDs.
