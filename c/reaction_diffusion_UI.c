@@ -1,5 +1,5 @@
 #define OLC_PGE_APPLICATION
-#include "C:\Users\Kazuto (^^)\Desktop\3d\olcPixelGameEngineC.h"
+#include "olcPixelGameEngineC.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
