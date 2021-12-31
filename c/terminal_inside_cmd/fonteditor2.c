@@ -1,4 +1,3 @@
-#define __STDC_WANT_LIBC_EXT1__
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
