@@ -40,8 +40,12 @@ void bmpsheet_crender(struct bmpsheet *self, char c, int column, int row, char o
 }
 
 void bmpsheet_srender(struct bmpsheet *self, char *str, int column, int row, char on, char off) {
-  for (int i = 0; i < (int) strlen(str); i++)
-    bmpsheet_crender(self, str[i], column + i * 8, row, on, off);
+  int ocol = column;
+  for (int i = 0; i < (int) strlen(str); i++) {
+    if (str[i] == '\n') {row += 8; column = ocol;}
+    bmpsheet_crender(self, str[i], column, row, on, off);
+    column += 8;
+  }
 }
 
 int bmpsheet_tofile(struct bmpsheet *self, char *name) {
