@@ -39,12 +39,13 @@ void bmpsheet_crender(struct bmpsheet *self, char c, int column, int row, char o
   bmpchar_render(self->s[(int)c], column, row, on, off);
 }
 
-void bmpsheet_srender(struct bmpsheet *self, char *str, int column, int row, char on, char off) {
+void bmpsheet_srender(struct bmpsheet *self, char *str, int column, int row, int maxcol, char on, char off) {
   int ocol = column;
   for (int i = 0; i < (int) strlen(str); i++) {
-    if (str[i] == '\n') {row += 8; column = ocol;}
+    if (str[i] == '\n') {row += 8; column = ocol; continue;}
     bmpsheet_crender(self, str[i], column, row, on, off);
     column += 8;
+    if (column > maxcol) {column = ocol; row += 8;}
   }
 }
 
@@ -91,4 +92,3 @@ void bmpsheet_free(struct bmpsheet* self) {
   bmpchar_render(&A);
   return 0;
 } */
-
